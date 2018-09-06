@@ -55,7 +55,8 @@ class Solution(object):
 
     def singleNumberXOR(self, nums):
         """
-
+        Time: N
+        Space: 1
         :param nums:
         :return:
         """
