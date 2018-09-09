@@ -1,6 +1,8 @@
 class Solution:
     def isValidSudoku(self, board):
         """
+        Time N^3
+        Space N
         :type board: List[List[str]]
         :rtype: bool
         """
