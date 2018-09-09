@@ -1,6 +1,8 @@
 class Solution:
     def rotate(self, matrix):
         """
+        Time: N^2
+        Space: 1
         :type matrix: List[List[int]]
         :rtype: void Do not return anything, modify matrix in-place instead.
         """
