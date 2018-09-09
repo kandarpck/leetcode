@@ -16,6 +16,8 @@ class Solution(object):
 
     def twoSum2(self, nums, target):
         """
+        Time: N
+        Space: N
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
