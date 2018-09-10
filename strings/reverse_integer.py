@@ -1,6 +1,8 @@
 class Solution:
     def reverse(self, x):
         """
+        Time: log N = 1
+        Space: N where is number of digits in x
         :type x: int
         :rtype: int
         """
@@ -18,4 +20,6 @@ class Solution:
 if __name__ == '__main__':
     sol = Solution()
     ip = -999991
+    print(sol.reverse(ip))
+    ip = -9999910
     print(sol.reverse(ip))
