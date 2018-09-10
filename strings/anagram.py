@@ -1,6 +1,8 @@
 class Solution:
     def isAnagram(self, s, t):
         """
+        Time: N
+        Space: 1
         :type s: str
         :type t: str
         :rtype: bool
