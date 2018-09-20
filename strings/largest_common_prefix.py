@@ -20,5 +20,5 @@ class Solution:
 
 if __name__ == '__main__':
     sol = Solution()
-    ip = ["flower", "flow", "flight"]
+    ip = ['flower', 'flow', 'flight']
     print(sol.longestCommonPrefix(ip))
