@@ -7,7 +7,7 @@ class Solution:
         :rtype: str
         """
         if not strs:
-            return ""
+            return ''
         strs = sorted(strs)
         first, last = strs[0], strs[-1]
         while first:
@@ -15,7 +15,7 @@ class Solution:
                 return first
             else:
                 first = first[:-1]
-        return ""
+        return ''
 
 
 if __name__ == '__main__':
