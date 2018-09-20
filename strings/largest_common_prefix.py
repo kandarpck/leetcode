@@ -1,6 +1,8 @@
 class Solution:
     def longestCommonPrefix(self, strs):
         """
+        Time: N log N
+        Space 1
         :type strs: List[str]
         :rtype: str
         """
