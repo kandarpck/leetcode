@@ -4,6 +4,13 @@ class ListNode:
         self.val = x
         self.next = None
 
+    def __repr__(self):
+        if self is None:
+            return "Nil"
+        else:
+            return "{} -> {}".format(self.val, repr(self.next))
+
+
 class Solution:
     def removeNthFromEnd(self, head, n):
         """
