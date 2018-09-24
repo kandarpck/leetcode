@@ -14,6 +14,8 @@ class ListNode:
 class Solution:
     def mergeTwoLists(self, l1, l2):
         """
+        Time: N
+        Space: 1
         :type l1: ListNode
         :type l2: ListNode
         :rtype: ListNode
