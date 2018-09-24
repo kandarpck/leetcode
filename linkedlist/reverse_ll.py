@@ -14,6 +14,22 @@ class ListNode:
 class Solution:
     def reverseList(self, head):
         """
+        Time: N
+        Space: 1
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        dummy = None
+        while head:
+            curr = head
+            head = head.next
+            curr.next = dummy
+            dummy = curr
+
+        return dummy
+
+    def reverseListRecursive(self, head):
+        """
         :type head: ListNode
         :rtype: ListNode
         """
