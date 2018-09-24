@@ -30,17 +30,19 @@ class Solution:
 
     def reverseListRecursive(self, head):
         """
+        Time: N
+        Space: N
         :type head: ListNode
         :rtype: ListNode
         """
-        dummy = None
-        while head:
-            curr = head
-            head = head.next
-            curr.next = dummy
-            dummy = curr
+        return self._reverse(head)
 
-        return dummy
+    def _reverse(self, node, prev=None):
+        if not node:
+            return prev
+        n = node.next
+        node.next = prev
+        return self._reverse(n, node)
 
 
 if __name__ == "__main__":
@@ -49,5 +51,12 @@ if __name__ == "__main__":
     head.next.next = ListNode(3)
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
-
     print(Solution().reverseList(head))
+
+    head = ListNode(1)
+    head.next = ListNode(2)
+    head.next.next = ListNode(3)
+    head.next.next.next = ListNode(4)
+    head.next.next.next.next = ListNode(5)
+
+    print(Solution().reverseListRecursive(head))
