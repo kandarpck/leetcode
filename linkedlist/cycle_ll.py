@@ -14,6 +14,8 @@ class ListNode:
 class Solution:
     def hasCycle(self, head):
         """
+        Time: N
+        Space: 1
         :type head: ListNode
         :rtype: bool
         """
