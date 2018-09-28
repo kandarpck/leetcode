@@ -14,6 +14,8 @@ class ListNode:
 class Solution:
     def isPalindrome(self, head):
         """
+        Time: N
+        Space: 1
         :type head: ListNode
         :rtype: bool
         """
@@ -28,6 +30,7 @@ class Solution:
         if fast:
             slow = slow.next
 
+        # compare reversed first half to second
         while rev and rev.val == slow.val:
             slow = slow.next
             rev = rev.next
