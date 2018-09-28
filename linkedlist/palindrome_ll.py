@@ -17,6 +17,21 @@ class Solution:
         :type head: ListNode
         :rtype: bool
         """
+        slow = fast = head
+        rev = None
+        # find the midpoint of the LL
+        while fast and fast.next:
+            fast = fast.next.next
+            rev, rev.next, slow = slow, rev, slow.next
+
+        # if odd number of elements in the LL
+        if fast:
+            slow = slow.next
+
+        while rev and rev.val == slow.val:
+            slow = slow.next
+            rev = rev.next
+        return not rev
 
 
 if __name__ == "__main__":
