@@ -12,6 +12,8 @@ class TreeNode(object):
 class Solution(object):
     # @param root, a tree node
     # @return a boolean
+    # Time: N
+    # Space: N
     def isValidBST(self, root):
         output = []
         self.inOrderTraversal(root, output)
