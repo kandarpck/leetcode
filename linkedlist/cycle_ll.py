@@ -8,7 +8,7 @@ class ListNode:
         if self is None:
             return "Nil"
         else:
-            return "{} -> {}".format(self.val, repr(self.next))
+            return "{} ".format(self.val)
 
 
 class Solution:
@@ -17,14 +17,19 @@ class Solution:
         :type head: ListNode
         :rtype: bool
         """
-        pass
+        slow = fast = head
+        while fast and fast.next:
+            slow, fast = slow.next, fast.next.next
+            if slow is fast:
+                return True
+        return False
 
 
 if __name__ == "__main__":
     head = ListNode(1)
     head.next = ListNode(2)
-    head.next.next = ListNode(2)
-    head.next.next.next = ListNode(1)
+    head.next.next = ListNode(3)
+    head.next.next.next = head.next.next
     print(Solution().hasCycle(head))
 
     head = ListNode(1)
@@ -32,5 +37,4 @@ if __name__ == "__main__":
     head.next.next = ListNode(3)
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
-
     print(Solution().hasCycle(head))
