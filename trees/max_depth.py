@@ -10,6 +10,10 @@ class TreeNode(object):
 
 
 class Solution(object):
+    """
+    Time: N
+    Space: h where h is height
+    """
     def maxDepth(self, root):
         """
         :type root: TreeNode
