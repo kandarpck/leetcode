@@ -10,11 +10,28 @@ class TreeNode(object):
 
 
 class Solution(object):
-    pass
+    # @param root, a tree node
+    # @return a boolean
+    def isValidBST(self, root):
+        output = []
+        self.inOrderTraversal(root, output)
+        for i in range(1, len(output)):
+            if output[i - 1].val >= output[i].val:
+                return False
+        return True
+
+    def inOrderTraversal(self, root, output):
+        if root is None:
+            return
+        self.inOrderTraversal(root.left, output)
+        output.append(root)
+        self.inOrderTraversal(root.right, output)
+
 
 if __name__ == "__main__":
-    root = TreeNode(1)
+    root = TreeNode(4)
     root.left = TreeNode(2)
-    root.right = TreeNode(3)
-    root.left.left = TreeNode(4)
-    print(Solution().maxDepth(root))
+    root.right = TreeNode(5)
+    root.left.left = TreeNode(1)
+    root.left.right = TreeNode(3)
+    print(Solution().isValidBST(root))
