@@ -18,7 +18,7 @@ class Solution(object):
         :rtype: bool
         """
         if not root:
-            return False
+            return True
         stack = list()
         stack.append(root.left)
         stack.append(root.right)
@@ -38,6 +38,16 @@ class Solution(object):
             stack.append(p.right)
             stack.append(q.left)
         return True
+
+    def isSymmetricRecursive(self, root):
+        """
+        Time: N
+        Space: h
+        :type root: TreeNode
+        :rtype: bool
+        """
+        if not root:
+            return True
 
 
 if __name__ == "__main__":
