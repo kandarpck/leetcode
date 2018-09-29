@@ -12,6 +12,8 @@ class TreeNode(object):
 class Solution(object):
     def isSymmetric(self, root):
         """
+        Time: N
+        Space: h
         :type root: TreeNode
         :rtype: bool
         """
