@@ -26,7 +26,7 @@ class Solution(object):
         while stack:
             p, q = stack.pop(), stack.pop()
 
-            if not (p and q):
+            if p is None and q is None:
                 continue
 
             if p is None or q is None or p.val != q.val:
@@ -49,6 +49,16 @@ class Solution(object):
         if not root:
             return True
 
+        return self.isSymmetricRecur(root.left, root.right)
+
+    def isSymmetricRecur(self, left, right):
+        if left is None and right is None:
+            return True
+        if left is None or right is None or left.val != right.val:
+            return False
+
+        return self.isSymmetricRecur(left.left, right.right) and self.isSymmetricRecur(left.right, right.left)
+
 
 if __name__ == "__main__":
     root = TreeNode(1)
@@ -58,7 +68,7 @@ if __name__ == "__main__":
     root.left.right = TreeNode(5)
     root.right.left = TreeNode(5)
     root.right.right = TreeNode(4)
-    print(Solution().isSymmetric(root))
+    print(Solution().isSymmetricRecursive(root))
 
     root2 = TreeNode(1)
     root2.left = TreeNode(2)
@@ -67,4 +77,4 @@ if __name__ == "__main__":
     root2.left.right = TreeNode(5)
     root2.right.left = TreeNode(6)
     root2.right.right = TreeNode(4)
-    print(Solution().isSymmetric(root2))
+    print(Solution().isSymmetricRecursive(root2))
