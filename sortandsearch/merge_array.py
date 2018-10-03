@@ -15,3 +15,9 @@ class Solution:
             A[last] = B[j]
             last, j = last - 1, j - 1
 
+
+if __name__ == "__main__":
+    A = [1, 3, 5, 0, 0, 0, 0]
+    B = [2, 4, 6, 7]
+    Solution().merge(A, 3, B, 4)
+    print(A)
