@@ -9,6 +9,8 @@ class TreeNode:
 class Solution(object):
     def sortedArrayToBST(self, nums):
         """
+        Time: O(n)
+        Space: O(logn)
         :type nums: List[int]
         :rtype: TreeNode
         """
