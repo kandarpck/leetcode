@@ -1,5 +1,8 @@
 class Solution:
-
+    """
+    Time: O(n)
+    Space: O(1)
+    """
     def merge(self, A, m, B, n):
         last, i, j = m + n - 1, m - 1, n - 1
 
