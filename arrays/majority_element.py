@@ -4,6 +4,8 @@ from collections import Counter
 class Solution:
     def majorityElement(self, nums):
         """
+        Time: N
+        Space: N
         :type nums: List[int]
         :rtype: List[int]
         """
