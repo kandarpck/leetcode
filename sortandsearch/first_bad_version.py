@@ -6,6 +6,8 @@ class Solution:
 
     def firstBadVersion(self, n):
         """
+        Time: log N
+        Space: 1
         :type n: int
         :rtype: int
         """
