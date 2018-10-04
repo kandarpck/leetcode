@@ -2,6 +2,7 @@ from collections import Counter
 
 
 class Solution:
+    
     def majorityElement(self, nums):
         """
         Time: N
@@ -15,6 +16,7 @@ class Solution:
             if count > len(nums) / 3:
                 res.append(num)
         return res
+
 
     def majorityElement2(self, nums):
         """
