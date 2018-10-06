@@ -17,6 +17,8 @@ class Solution:
         :type l1: ListNode
         :type l2: ListNode
         :rtype: ListNode
+        Time: N
+        Space: 1
         """
         dummy = new_node = ListNode(-1)
         carry = 0
@@ -39,4 +41,3 @@ if __name__ == "__main__":
     head2.next = ListNode(9)
 
     print(Solution().addTwoNumbers(head, head2))
-   
