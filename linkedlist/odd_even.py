@@ -16,7 +16,11 @@ class Solution:
         """
         :type head: ListNode
         :rtype: ListNode
+        Time: N
+        Space: 1
         """
+        if not head:
+            return head
         slow, fast = head, head.next
         while fast and fast.next:
             even_head = slow.next
