@@ -14,7 +14,11 @@ class Solution:
         """
         :type root: TreeNode
         :rtype: List[List[int]]
+        Time: N
+        Space: N
         """
+        if not root:
+            return list()
         result, current = [], [root]
         counter = 0
         while current:
