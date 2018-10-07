@@ -15,6 +15,8 @@ class Solution:
         :type preorder: List[int]
         :type inorder: List[int]
         :rtype: TreeNode
+        Time: N
+        Space: h
         """
         if inorder:
             ind = inorder.index(preorder.pop(0))
