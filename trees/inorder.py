@@ -33,6 +33,8 @@ class Solution2(object):
         """
         :type root: TreeNode
         :rtype: List[int]
+        Time: N
+        Space: h
         """
         result, stack = [], [(root, False)]
         while stack:
