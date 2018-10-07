@@ -13,7 +13,7 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         Time: N
-        Space: N 
+        Space: N
         """
         order = []
         self.inorderTraversalRecursive(order, root)
@@ -34,6 +34,19 @@ class Solution2(object):
         :type root: TreeNode
         :rtype: List[int]
         """
+        result, stack = [], [(root, False)]
+        while stack:
+            node, is_visited = stack.pop()
+            if not node:
+                continue
+            if is_visited:
+                result.append(node.val)
+            else:
+                stack.append((node.right, False))
+                stack.append((node, True))
+                stack.append((node.left, False))
+
+        return result
 
 
 if __name__ == "__main__":
@@ -42,3 +55,5 @@ if __name__ == "__main__":
     root.right = TreeNode(3)
     root.right.right = TreeNode(4)
     print(Solution().inorderTraversal(root))
+
+    print(Solution2().inorderTraversal(root))
