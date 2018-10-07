@@ -5,6 +5,9 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+    def __repr__(self):
+        return "{}".format(self.val)
+
 
 class Solution(object):
 
