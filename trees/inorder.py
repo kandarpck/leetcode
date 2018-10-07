@@ -25,6 +25,15 @@ class Solution(object):
         self.inorderTraversalRecursive(order, root.right)
 
 
+class Solution2(object):
+
+    def inorderTraversal(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[int]
+        """
+
+
 if __name__ == "__main__":
     root = TreeNode(1)
     root.left = TreeNode(2)
