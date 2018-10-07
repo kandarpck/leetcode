@@ -12,6 +12,8 @@ class Solution(object):
         """
         :type root: TreeNode
         :rtype: List[int]
+        Time: N
+        Space: N 
         """
         order = []
         self.inorderTraversalRecursive(order, root)
