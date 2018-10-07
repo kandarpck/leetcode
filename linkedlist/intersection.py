@@ -16,6 +16,8 @@ class Solution:
         """
         :type head1, head1: ListNode
         :rtype: ListNode
+        Time: O(n + m)
+        Space: 1
         """
         if not (headA and headB):
             return None
