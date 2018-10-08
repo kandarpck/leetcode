@@ -15,12 +15,11 @@ class Solution(object):
         :type root: TreeNode
         :type k: int
         :rtype: int
-        Time: N log N
+        Time: N
         Space: h
         """
         output = []
         self.inorder(output, root)
-        output = sorted(output)
         return output[k - 1]
 
     def inorder(self, output, root):
