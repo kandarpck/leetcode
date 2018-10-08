@@ -13,6 +13,8 @@ class TreeNode(object):
 class Solution:
     # @param root, a tree link node
     # @return nothing
+    # Time: N
+    # Space: h
     def connect(self, root):
         if not root:
             return None
