@@ -12,6 +12,8 @@ class TreeNode(object):
 class Solution(object):
     # @param root, a tree node
     # @return a list of lists of integers
+    # Time: N
+    # Space: h
     def levelOrder(self, root):
         if root is None:
             return []
