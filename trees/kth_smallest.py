@@ -16,7 +16,17 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        pass
+        output = []
+        self.inorder(output, root)
+        output = sorted(output)
+        return output[k - 1]
+
+    def inorder(self, output, root):
+        if not root:
+            return None
+        self.inorder(output, root.left)
+        output.append(root.val)
+        self.inorder(output, root.right)
 
 
 if __name__ == "__main__":
