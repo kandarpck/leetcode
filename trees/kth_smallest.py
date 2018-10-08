@@ -15,6 +15,8 @@ class Solution(object):
         :type root: TreeNode
         :type k: int
         :rtype: int
+        Time: N log N
+        Space: h
         """
         output = []
         self.inorder(output, root)
