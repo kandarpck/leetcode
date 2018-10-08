@@ -10,7 +10,12 @@ class TreeNode(object):
 
 
 class Solution(object):
-    def kthSmallest(self):
+    def kthSmallest(self, root, k):
+        """
+        :type root: TreeNode
+        :type k: int
+        :rtype: int
+        """
         pass
 
 
@@ -19,4 +24,4 @@ if __name__ == "__main__":
     root.left = TreeNode(2)
     root.right = TreeNode(3)
     root.right.right = TreeNode(4)
-    print(Solution().kthSmallest(root))
+    print(Solution().kthSmallest(root, k=3))
