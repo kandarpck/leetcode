@@ -16,6 +16,8 @@ class Solution(object):
         :type L: int
         :type R: int
         :rtype: TreeNode
+        Time: N
+        Space: h for stack size
         """
         if not root:
             return None
