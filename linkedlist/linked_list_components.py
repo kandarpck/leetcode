@@ -15,7 +15,9 @@ class Solution(object):
         """
         :param head:
         :param G:
-        :return:
+        :return: int
+        Time: N
+        Space: N
         """
         lookup = set(G)
         curr = ListNode(-1)
@@ -34,9 +36,13 @@ if __name__ == '__main__':
     head.next.next = ListNode(3)
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
-
     G = [0, 3, 1, 4]
-
     print(Solution().numOfComponents(head, G))
 
-    
+    head2 = ListNode(1)
+    head2.next = ListNode(2)
+    head2.next.next = ListNode(3)
+    head2.next.next.next = ListNode(4)
+    head2.next.next.next.next = ListNode(5)
+    G = [1, 2, 4]
+    print(Solution().numOfComponents(head2, G))
