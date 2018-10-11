@@ -1,3 +1,6 @@
+from random import randint
+
+
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -22,7 +25,13 @@ class Solution(object):
         Time: N
         Space: N
         """
-        pass
+        reservoir = -1
+        curr, n = self.head, 0
+        while curr:
+            reservoir = curr.val if randint(1, n + 1) == 1 else reservoir
+            curr = curr.next
+            n += 1
+        return reservoir
 
 
 if __name__ == '__main__':
