@@ -3,6 +3,12 @@ class ListNode(object):
         self.val = x
         self.next = None
 
+    def __repr__(self):
+        if self is None:
+            return "Nil"
+        else:
+            return "{} -> {}".format(self.val, repr(self.next))
+
 
 class Solution(object):
     def numOfComponents(self, head, G):
@@ -11,7 +17,15 @@ class Solution(object):
         :param G:
         :return:
         """
-        pass
+        lookup = set(G)
+        curr = ListNode(-1)
+        curr.next = head
+        res = 0
+        while curr and curr.next:
+            if curr.val in lookup and curr.next.val not in lookup:
+                res += 1
+            curr = curr.next
+        return res
 
 
 if __name__ == '__main__':
@@ -24,3 +38,5 @@ if __name__ == '__main__':
     G = [0, 3, 1, 4]
 
     print(Solution().numOfComponents(head, G))
+
+    
