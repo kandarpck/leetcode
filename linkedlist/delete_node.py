@@ -2,7 +2,7 @@
 # Space: O(1)
 #
 # Write a function to delete a node (except the tail) in a singly linked list,
-# given only access to that node.
+# given access to the tree
 #
 # Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node
 # with value 3, the linked list should become 1 -> 2 -> 4 after calling your function.
@@ -22,7 +22,7 @@ class ListNode:
 
 class Solution:
     # @param {ListNode} node
-    # @return {void} Do not return anything, modify node in-place instead.
+    # @return {ListNode} head
     def deleteNode(self, head, v):
         curr = dummy = ListNode(-1)
         dummy.next = head
