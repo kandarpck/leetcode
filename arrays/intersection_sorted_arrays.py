@@ -6,7 +6,8 @@
 # answer: (3, 3, 9)
 
 
-# Max(A, B): Time complexity for below solution. Works in most cases 
+# Max(A, B): Time complexity for below solution. Works in most cases
+# A log(B): When A is small but B is very large, approach with Binary Search
 
 class Solution(object):
     def intersection_sorted_arrays(self, A, B):
