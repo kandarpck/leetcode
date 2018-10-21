@@ -6,6 +6,8 @@
 # answer: (3, 3, 9)
 
 
+# Max(A, B): Time complexity for below solution. Works in most cases 
+
 class Solution(object):
     def intersection_sorted_arrays(self, A, B):
         """
