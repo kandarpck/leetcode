@@ -30,4 +30,4 @@ if __name__ == "__main__":
     root.left = TreeNode(1)
     root.right = TreeNode(3)
     root.right.right = TreeNode(4)
-    print(Solution().lowestCommonAncestor(root, root.left, root.right))
+    print(Solution().lowestCommonAncestor(root, root.right, root.right.right))
