@@ -3,6 +3,8 @@ class Solution(object):
         """
         :type board: List[str]
         :rtype: bool
+        # Time:  1
+        # Space: 1
         """
 
         def win(board, player):
