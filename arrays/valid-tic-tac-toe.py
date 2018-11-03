@@ -25,6 +25,7 @@ class Solution(object):
         if win(board, SECOND) and x_count != o_count:
             return False
 
+        return True
 
 if __name__ == '__main__':
     pass
