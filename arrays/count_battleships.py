@@ -3,6 +3,9 @@ class Solution(object):
         """
         :type board: List[List[str]]
         :rtype: int
+        # Time:  O(m * n)
+        # Space: O(1)
+
         """
         if not board or not board[0]:
             return 0
