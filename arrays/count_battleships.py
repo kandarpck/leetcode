@@ -4,6 +4,9 @@ class Solution(object):
         :type board: List[List[str]]
         :rtype: int
         """
+        if not board or not board[0]:
+            return 0
+
         cnt = 0
         for i in range(len(board)):
             for j in range(len(board[0])):
