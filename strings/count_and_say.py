@@ -3,6 +3,8 @@ class Solution:
         """
         :type n: int
         :rtype: str
+        Time:  O(n * 2^n)
+        Space: O(2^n)
         """
         seq = "1"
         for i in range(n - 1):
