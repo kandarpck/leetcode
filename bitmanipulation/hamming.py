@@ -4,6 +4,8 @@ class Solution(object):
         :type x: int
         :type y: int
         :rtype: int
+        # Time:  O(1)
+        # Space: O(1)
         """
         distance = 0
         z = x ^ y
