@@ -21,6 +21,15 @@ class SolutionRecursive:
             return self.isMatch(s, p[2:])
 
 
+class SolutionDP(object):
+    def isMatch(self, s, p):
+        pass
+
+
 if __name__ == '__main__':
     assert SolutionRecursive().isMatch("aa", "a") is False
-    assert SolutionRecursive().isMatch("aa", "aa") is True
+    assert SolutionRecursive().isMatch("baa", ".*a*") is True
+    s = 'aa'
+    p = 'aa'
+    result = [[False for j in range(len(p) + 1)] for i in range(len(s) + 1)]
+    print(result)
