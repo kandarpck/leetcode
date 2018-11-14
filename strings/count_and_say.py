@@ -1,3 +1,6 @@
+import itertools
+
+
 class Solution:
     def countAndSay(self, n):
         """
@@ -23,5 +26,15 @@ class Solution:
         return next_seq
 
 
+class Solution2():
+    def countAndSay(self, n):
+        s = '1'
+        for _ in range(n - 1):
+            s = ''.join(str(len(list(group))) + digit
+                        for digit, group in itertools.groupby(s))
+        return s
+
+
 if __name__ == '__main__':
     print(Solution().countAndSay(4))
+    print(Solution2().countAndSay(6))
