@@ -1,5 +1,7 @@
 class Solution:
     # @return an integer
+    # Time: lg N
+    # Space: 1
     def divide(self, dividend, divisor):
         positive = (dividend < 0) is (divisor < 0)
         dividend, divisor = abs(dividend), abs(divisor)
@@ -18,4 +20,4 @@ class Solution:
 
 if __name__ == '__main__':
     print(Solution().divide(9, 3))
-    print(Solution().divide(10, 3))
+    print(Solution().divide(10, -3))
