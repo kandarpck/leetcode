@@ -16,6 +16,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     sol = Solution()
-    ip = [1, 1, 2]
+    ip = [1, 1, 2, 2]
     print(sol.removeDuplicates(ip))
     print(ip)

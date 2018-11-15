@@ -14,7 +14,8 @@ class Solution:
 
     def intersect_counter(self, nums1, nums2):
         """
-        Time:
+        Time: N
+        Space: N
 
         :param nums1:
         :param nums2:
