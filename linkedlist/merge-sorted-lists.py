@@ -40,10 +40,10 @@ if __name__ == "__main__":
     head.next.next.next = ListNode(4)
     head.next.next.next.next = ListNode(5)
 
-    head2 = ListNode(1)
-    head2.next = ListNode(3)
-    head2.next.next = ListNode(3)
-    head2.next.next.next = ListNode(5)
-    head2.next.next.next.next = ListNode(5)
+    head2 = ListNode(10)
+    head2.next = ListNode(30)
+    head2.next.next = ListNode(30)
+    head2.next.next.next = ListNode(50)
+    head2.next.next.next.next = ListNode(50)
 
     print(Solution().mergeTwoLists(head, head2))
