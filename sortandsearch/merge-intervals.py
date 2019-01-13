@@ -14,20 +14,21 @@ class Solution:
         :type intervals: List[Interval]
         :rtype: List[Interval]
         Time: O(n log n) if not sorted else O(n)
-        Space: O(n)
+        Space: O(1)
         """
         if not intervals:
             return []
         intervals.sort(key=lambda x: x.start)
-        res = [intervals[0]]
-        for idx in range(1, len(intervals)):
-            prev = res[-1]
+        idx = 0
+        while idx < len(intervals) - 1:
             current = intervals[idx]
-            if current.start <= prev.end:
-                prev.end = max(current.end, prev.end)
+            next = intervals[idx + 1]
+            if current.end >= next.start:
+                current.end = max(current.end, next.end)
+                del intervals[idx + 1]
             else:
-                res.append(current)
-        return res
+                idx += 1
+        return intervals
 
 
 if __name__ == '__main__':
