@@ -11,7 +11,7 @@ class Solution:
         while low < high:
             m1 = (low + high) // 2
             m2 = m1 + 1
-            if nums[m1 - 1] < nums[m1] and nums[m1] > nums[m2]:
+            if nums[m1 - 1] < nums[m1] > nums[m2]:
                 return m1
             if nums[m1] > nums[m2]:
                 high = m1
