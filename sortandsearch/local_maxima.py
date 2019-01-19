@@ -3,6 +3,8 @@ class Solution:
         """
         :type nums: List[int]
         :rtype: int
+        Time: O(log n)
+        Space: O(1)
         """
         low = 0
         high = len(nums) - 1
