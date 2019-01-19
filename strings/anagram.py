@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 class Solution:
     def isAnagram(self, s, t):
         """
@@ -9,12 +12,9 @@ class Solution:
         """
         if len(s) != len(t):
             return False
-        count = {}
+        count = defaultdict(int)
         for char in s:
-            if char not in count:
-                count[char] = 1
-            else:
-                count[char] += 1
+            count[char] += 1
         for char in t:
             if char not in count:
                 count[char] = -1
@@ -30,6 +30,6 @@ if __name__ == '__main__':
     ip = 'harsh'
     ip2 = 'srhah'
     print(sol.isAnagram(ip, ip2))
-    ip = 'cabb'
-    ip2 = 'bcab'
+    ip = 'aacc'
+    ip2 = 'ccac'
     print(sol.isAnagram(ip, ip2))
