@@ -25,6 +25,8 @@ class Solution:
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
+        Time: O(log n)
+        Space: O(1)
         """
         low = 0
         high = len(nums) - 1
@@ -39,3 +41,11 @@ class Solution:
                 e = self.search_end(nums, mid, high)
                 return [s, e]
         return [-1, -1]
+
+
+if __name__ == '__main__':
+    assert [1, 16] == Solution().searchRange([1, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], 8)
+    assert [-1, -1] == Solution().searchRange([], 8)
+    assert [1, 1] == Solution().searchRange([1, 3], 3)
+    assert [0, 0] == Solution().searchRange([1], 1)
+    assert [17, 17] == Solution().searchRange([1, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9], 9)
