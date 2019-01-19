@@ -26,6 +26,7 @@ class Solution:
                     high = mid - 1
         return -1
 
+
 class Solution2:
 
     def search(self, nums, target):
@@ -36,6 +37,8 @@ class Solution2:
         Time: O(logn)
         Space: O(1)
         """
+        # Find the smallest element
+        # Which is the rotation index
         low = 0
         high = len(nums) - 1
         while low <= high:
@@ -45,15 +48,23 @@ class Solution2:
             else:
                 high = mid - 1
 
+        # take into account rotation and
+        # run normal binary search
         rot = low
         low = 0
         high = len(nums) - 1
         while low < high:
             mid = (low + high) // 2
             real_mid = (mid + rot) % len(nums)
-            if nums[real_mid] <
-
+            if nums[real_mid] < target:
+                low = mid + 1
+            elif nums[real_mid] > target:
+                high = mid - 1
+            else:
+                return real_mid
+        return -1
 
 
 if __name__ == '__main__':
     print(Solution().search([4, 5, 6, 7, 8, 1], 1))
+    print(Solution2().search([4, 5, 6, 7, 8, 1], 1))
