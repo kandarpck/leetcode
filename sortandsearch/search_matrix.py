@@ -29,4 +29,5 @@ if __name__ == '__main__':
         [10, 13, 14, 17, 24],
         [18, 21, 23, 26, 30]
     ]
-    print(Solution().search_matrix(ip, 0))
+    print(Solution().search_matrix(ip, 30))
+    print(Solution().search_matrix(ip, 20))
